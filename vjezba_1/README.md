@@ -18,7 +18,7 @@ cd vjezba_1/backend_app && npm install && npm run dev   # http://localhost:3000
 | GET | `/api/todos` | – |
 | GET | `/api/todos/:id` | – |
 | POST | `/api/todos` | `{ "naslov": "..." }` |
-| PATCH | `/api/todos/:id` | `{ "naslov"?: "...", "gotovo"?: true }` |
+| PATCH | `/api/todos/:id` | `{ "gotovo": true }` |
 | DELETE | `/api/todos/:id` | – |
 
 ## Primjeri s curl

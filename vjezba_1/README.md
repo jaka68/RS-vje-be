@@ -14,7 +14,6 @@ cd vjezba_1/backend_app && npm install && npm run dev   # http://localhost:3000
 
 | Metoda | Putanja | Tijelo |
 |---|---|---|
-| GET | `/api/health` | – |
 | GET | `/api/todos` | – |
 | GET | `/api/todos/:id` | – |
 | POST | `/api/todos` | `{ "naslov": "..." }` |
@@ -25,7 +24,6 @@ cd vjezba_1/backend_app && npm install && npm run dev   # http://localhost:3000
 
 ```bash
 URL=https://rs-vjezbe-backendf.onrender.com
-curl $URL/api/health
 curl $URL/api/todos
 curl -X POST -H "Content-Type: application/json" -d '{"naslov":"Novi zadatak"}' $URL/api/todos
 curl -X PATCH -H "Content-Type: application/json" -d '{"gotovo":true}' $URL/api/todos/1

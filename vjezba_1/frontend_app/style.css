@@ -14,7 +14,6 @@ main {
 }
 
 h1 { margin-bottom: 4px; }
-.podnaslov { color: #656d76; margin-top: 0; }
 
 .kartica {
   background: #fff;
@@ -63,5 +62,4 @@ li {
 li span { flex: 1; }
 li.gotovo span { text-decoration: line-through; color: #8c959f; }
 
-.ok { color: #16a34a; }
 .greska { color: #dc2626; }

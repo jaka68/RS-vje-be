@@ -14,10 +14,6 @@ app.get("/", (req, res) => {
   res.send("Server radi!");
 });
 
-app.get("/api/health", (req, res) => {
-  res.json({ status: "ok", vrijeme: new Date() });
-});
-
 app.get("/api/todos", (req, res) => {
   res.json(todos);
 });

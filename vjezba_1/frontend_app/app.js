@@ -5,7 +5,6 @@ const API_URL =
     ? "http://localhost:3000"
     : "https://rs-vjezbe-backendf.onrender.com";
 
-const statusEl = document.getElementById("status");
 const listaEl = document.getElementById("lista");
 const formaEl = document.getElementById("forma");
 const naslovEl = document.getElementById("naslov");
@@ -17,17 +16,6 @@ async function api(putanja, opcije = {}) {
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
-}
-
-async function provjeriStatus() {
-  try {
-    const data = await api("/api/health");
-    statusEl.textContent = `API radi ✔ (${new Date(data.vrijeme).toLocaleString("hr-HR")})`;
-    statusEl.className = "ok";
-  } catch (e) {
-    statusEl.textContent = `API nije dostupan (${e.message}). Besplatni Render servis se možda budi – pričekaj ~30 s i osvježi.`;
-    statusEl.className = "greska";
-  }
 }
 
 function prikazi(todos) {
@@ -81,5 +69,4 @@ formaEl.addEventListener("submit", async (e) => {
   ucitaj();
 });
 
-provjeriStatus();
 ucitaj();

@@ -24,7 +24,7 @@ cd vjezba_1/backend_app && npm install && npm run dev   # http://localhost:3000
 ## Primjeri s curl
 
 ```bash
-URL=https://rs-vjezbe-backend.onrender.com
+URL=https://rs-vjezbe-backendf.onrender.com
 curl $URL/api/health
 curl $URL/api/todos
 curl -X POST -H "Content-Type: application/json" -d '{"naslov":"Novi zadatak"}' $URL/api/todos
